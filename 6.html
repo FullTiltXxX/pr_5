@@ -1,0 +1,61 @@
+<html>
+<head>
+ <title>оператор return</title>
+ <script type="text/javascript">
+ function add(a,b) {
+ return a+b;
+}
+ function sub(a,b) {
+ return a-b;
+}
+ function mul(a,b) {
+ return a*b;
+}
+
+ function div(a,b) {
+ return a/b;
+}
+function Degree(a,b){
+    return Math.pow(a,b);
+}
+function Root(a,b){
+    return Math.pow(a, 1 / b)
+}
+ let operand1=prompt("Введіть перше число: ");
+ let sign=prompt("Введіть знак арифметичної операції: + - * / ^ √ " );
+ let operand2=prompt("Введіть друге число: ");
+ let result=undefined;
+
+ operand1=parseInt(operand1);//глобальний метод parseInt
+ operand2=parseInt(operand2);//глобальний метод parseInt
+ switch(sign) {
+ case "+":
+  result=add(operand1,operand2);
+ break;
+ case "-":
+ result=sub(operand1,operand2);
+ break;
+ case "*":
+ result=mul(operand1,operand2);
+ break;
+ case "/":
+ result=div(operand1,operand2);
+ break;
+ case "^":
+ result=Degree(operand1,operand2);
+ break;
+ case "√":
+ result=Root(operand1,operand2);
+ break;
+ default:
+ document.write("<p><b style='color:red'>"+sign+"</b> - не є знаком арифметичної операції.");
+}
+
+ if(result!=undefined)
+ document.write("<p>"+operand1+" "+sign+" "+operand2+"="+result);
+
+ </script>
+</head>
+<body>
+</body>
+</html>
